@@ -345,7 +345,7 @@ html{
   }
   footer p{
     margin: 0;
-    padding-bottom: 1rem;
+    padding-bottom: 1.2rem;
     line-height: 1;
   }
   footer h3{
@@ -380,7 +380,7 @@ html{
 
 
 @media (min-width:710px){
-    .toggle{
+    .dropbtn{
       display:none;
     }
     .agency img{
@@ -390,6 +390,50 @@ html{
       margin-left: 1rem;
     }  
   }
+@media (max-width:470px){
+  body{
+    width: 100%;
+    font-size: .8rem;
+  }
+  .wrapper{
+    width: 93%;
+  }
+  section img{
+    display: block;
+    margin: auto;
+  }
+  .portfolio img{
+    display: inline-block;
+    margin: auto;
+    width: 150%;
+  }
+  .market{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .market h2{
+    color: black;
+    font-size: 3rem;
+    margin-bottom: 3.5rem;
+  }
+  .market p{
+    font-size: 1.2rem;
+    font-weight: 400;  
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
+  .market img{
+    width: 60%;
+    height: 55%;
+  }
+  .agency img{
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+}
 @media (max-width:700px){
   body{
     width: 100%;
@@ -422,25 +466,44 @@ html{
       height: 100%;
     }
     nav{
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-column: auto;
+      display: flex;
+      flex-flow: row wrap;
       justify-content: space-between;
       padding-bottom: 0.5rem;
     }
-    .toggle{
-      justify-self: end;
+    .dropbtn{
+      border: none;
+      cursor: pointer;
     }
+    .drop{
+      position:relative;
+      display: inline-block;
+    }
+    .content{
+        display:none;
+        position: absolute;
+        right: 0;
+        z-index: 5;
+        min-width: 150px;
+        background-color: #f2f5f7;
+        color: #2E6FE7;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      }
+    .content li{
+       display: block;
+       padding: 10px 12px;
+      }
+      .content li:hover, .content a:hover{
+        border-bottom: #2E6FE7 solid 2px;
+      }
+      .content a{
+        color: #2E6FE7;
+      }
+      .drop:hover .content{
+        display: block;
+      }
     nav a[class*="fa-"]{
       font-size:150%;
-    }
-     nav ul{
-      display: block;
-      text-align: start;
-    }
-    nav li{
-      margin-bottom:0.8rem;
-      width: 86px;
     }
     .button{
       box-shadow: none;
@@ -465,6 +528,7 @@ html{
     }
     .flex-card{
       display: block;
+      padding-left: 1rem;
     }
     .card{
       width: 80%;
@@ -473,6 +537,11 @@ html{
     }
     .market{
       padding-left: 2rem;
+    }
+    .market h2{
+      text-align: center;
+      font-size: 3rem;
+      color: black;
     }
     .market img{
       width: 50%;
